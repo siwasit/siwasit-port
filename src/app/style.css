@@ -1,0 +1,39 @@
+/* WalkingCat.css */
+
+/* Container ensures the component aligns properly */
+.walking-cat-container {
+    position: relative;
+    width: 100%;
+    /* Ensure it spans the parent width */
+    height: 100%;
+    overflow: hidden;
+    /* Prevent the cat from showing outside its container */
+}
+
+/* Walking Cat Animation */
+.walking-cat {
+    position: absolute;
+    animation: walk 30s linear infinite;
+    /* Move continuously */
+    bottom: 0;
+}
+
+/* Animation keyframes */
+@keyframes walk {
+    0% {
+      left: 0%; /* Start at the left edge */
+      transform: scaleX(1); /* Face right */
+    }
+    49% {
+      left: 100%; /* Move to the right edge */
+      transform: scaleX(1); /* Keep facing right until the edge */
+    }
+    50% {
+      left: 100%; /* Start at the right edge */
+      transform: scaleX(-1); /* Instantly flip to face left */
+    }
+    100% {
+      left: 0%; /* Move back to the left edge */
+      transform: scaleX(-1); /* Keep facing left */
+    }
+  }

@@ -19,3 +19,63 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.walkingCat {
+  animation: walk 10s linear infinite; /* Duration: 10 seconds, infinite loop */
+}
+
+@keyframes walk {
+  0% {
+    left: -150px; /* Start completely off-screen on the left */
+  }
+  100% {
+    left: 100vw; /* Walk off-screen to the right */
+  }
+}
+
+/* Shared styles for bouncing animation */
+.bouncing-image {
+  position: absolute;
+  box-shadow: #a74141 0px 4px 12px;
+  animation: bounce 4s ease-in-out infinite;
+}
+
+.bouncing-card {
+  animation: bounce 4s ease-in-out infinite;
+}
+
+/* React Icon */
+.react-icon {
+  animation-delay: 0s;
+}
+
+.figma-icon {
+  animation-delay: 1.5s;
+}
+
+/* 3OldGod Icon */
+.old-god {
+  animation-delay: 0.5s;
+}
+
+/* Tailwind Icon */
+.tailwind {
+  width: 16vh;
+  animation-delay: 1s;
+}
+
+/* Keyframes for bouncing */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); /* Start and end at the same position */
+  }
+  50% {
+    transform: translateY(-20px); /* Move up slightly */
+  }
+}
+
