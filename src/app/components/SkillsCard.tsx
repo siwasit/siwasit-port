@@ -1,6 +1,11 @@
-import PropTypes from 'prop-types';
+import React from "react";
 
-const SkillsCard = ({ imageSrc, title }) => {
+interface SkillsCardProps {
+    imageSrc: string;
+    title: string;
+}
+
+const SkillsCard: React.FC<SkillsCardProps> = ({ imageSrc, title }) => {
     return (
         <div className='w-[250px] h-[300px] flex-shrink-0 bouncing-card' style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 8px 16px" }}>
             <div className="h-2/3">
@@ -13,11 +18,6 @@ const SkillsCard = ({ imageSrc, title }) => {
             </div>
         </div>
     );
-};
-
-SkillsCard.propTypes = {
-    imageSrc: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired
 };
 
 export default SkillsCard;
